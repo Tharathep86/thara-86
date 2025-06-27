@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>รายการอาหารเส้น</title>
+<link rel="stylesheet" href="css/food.css">
+<!-- โหลดฟอนต์ Kanit -->
+<link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet" />
+</head>
+<header>
+  <h1><img src="img/dog chef.jpg" height="100" width="100" ></h1>
+<h2>ร้านข้าวฝีมือกังๆเชฟDAWG</h2>
+<nav>
+<div class="menu-bar">
+  <div class="menu-logo">
+  <a href="#" class="menu-item">
+      <a href="food.html"><img src="https://img.icons8.com/fluent-systems-regular/512w/FFFFFF/meal.png" alt="อาหารคาว">
+       <a href="food.html">อาหารคาว</a>
+      </a>
+  </a>
+      <a href="#" class="menu-item">
+      <a href="noodles.html"><img src="https://flaticons.net/icon.php?slug_category=food&slug_icon=noodles-01" alt="อาหารคาว">
+       <a href="noodles.html">อาหารเส้น</a>
+      </a>
+  </a>
+      <a href="#" class="menu-item">
+      <a href="appetizers.html"><img src="https://img.icons8.com/ios7/512w/FFFFFF/potato-chips.png" alt="อาหารทานเล่น">
+       <a href="appetizers.html">อาหารทานเล่น</a>
+      </a>
+  </a>
+      <a href="#" class="menu-item">
+      <a href="desert.html"><img src="https://img.icons8.com/fluent-systems-filled/512w/FFFFFF/cake.png" alt="ของหวาน">
+       <a href="desert.html">ของหวาน</a>
+      </a>
+  </a>
+      <a href="#" class="menu-item">
+      <a href="drinks.html"><img src="https://img.icons8.com/ios7/600w/FFFFFF/cocktail.png" alt="เครื่องดื่ม">
+       <a href="drinks.html">เครื่องดื่ม</a>
+      </a>
+  </a>
+    </div>
+</div>
+    </nav>
+</header>
+<h2 class="w3-center">Automatic Slideshow</h2>
+
+<div class="w3-content w3-section" style="max-width:500px; margin:auto; text-align:center;">
+  <img class="mySlides" src="https://img.wongnai.com/p/800x0/2021/12/13/464583a8ce4c4499a6daa661eb9b998f.jpg" style="width:100%">
+  <img class="mySlides" src="https://img.wongnai.com/p/800x0/2021/12/13/fd241897c3654a28a1cd8bfec90520d0.jpg" style="width:100%">
+  <img class="mySlides" src="https://img.wongnai.com/p/800x0/2021/12/13/3c8c143b82cf449e8f90a3b4c215ed0b.jpg" style="width:100%">
+  <img class="mySlides" src="https://img.wongnai.com/p/800x0/2021/12/13/95d08edd66d34d10aa0366f099872c1f.jpg" style="width:100%">
+  <img class="mySlides" src="https://img.wongnai.com/p/800x0/2021/12/13/da07b958151b40cc9305511df1332bcc.jpg" style="width:100%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+<body>
+  <h1>🍜รายการอาหารเส้น🍜</h1>
+ <div class="food-list">
+  <div class="food-item">
+    <img class="food-image" src="https://img.wongnai.com/p/1920x0/2019/01/10/969acc566a18414b9f20549d7309b9c0.jpg" alt="ขนมจีนน้ำพริก">
+    <div class="food-info">
+      <div class="food-category">เส้น</div>
+      <div class="food-name">ขนมจีนน้ำพริก</div>
+      <div class="food-price">ราคา 70 บาท</div>
+    </div>
+  </div>
+
+  <div class="food-item">
+    <img class="food-image" src="https://img.wongnai.com/p/1920x0/2018/12/25/1961c603dabc487db3a648e12c665d61.jpg" alt="ก๋วยเตี๋ยวไก่ตุ๋นมะระ">
+    <div class="food-info">
+      <div class="food-category">เส้น</div>
+      <div class="food-name">ก๋วยเตี๋ยวไก่ตุ๋นมะระ</div>
+      <div class="food-price">ราคา 50 บาท</div>
+    </div>
+  </div>
+
+  <div class="food-item">
+    <img class="food-image" src="https://img.wongnai.com/p/1920x0/2018/09/28/e2c91f30de5a449db878ea763b104e69.jpg" alt="ก๋วยเตี๋ยวเรือ">
+    <div class="food-info">
+      <div class="food-category">เส้น</div>
+      <div class="food-name">ก๋วยเตี๋ยวเรือ</div>
+      <div class="food-price">ราคา 60 บาท</div>
+    </div>
+  </div>
+
+  <div class="food-item">
+    <img class="food-image" src="https://img.wongnai.com/p/1920x0/2018/09/13/8dda3c57b791426e9b00116d212b10f1.jpg" alt="ก๋วยเตี๋ยวเป็ด ">
+    <div class="food-info">
+      <div class="food-category">เส้น</div>
+      <div class="food-name">ก๋วยเตี๋ยวเป็ด</div>
+      <div class="food-price">ราคา 60 บาท</div>
+    </div>
+  </div>
+
+
+ <div class="food-item">
+    <img class="food-image" src="https://img.wongnai.com/p/1920x0/2018/02/12/15d62d9461724c8eb6e92267216a6f1b.jpg" alt="ผัดวุ้นเส้นเกาหลี">
+    <div class="food-info">
+      <div class="food-category">เส้น</div>
+      <div class="food-name">ผัดวุ้นเส้นเกาหลี</div>
+      <div class="food-price">ราคา 40 บาท</div>
+    </div>
+  </div>
+
+  <div class="food-item">
+    <img class="food-image" src="https://img.wongnai.com/p/1920x0/2018/05/24/1209580641124ff8bd5e560c5d4c754a.jpg" alt="ขนมจีนผัดขี้เมากุ้ง">
+    <div class="food-info">
+      <div class="food-category">เส้น</div>
+      <div class="food-name">ขนมจีนผัดขี้เมากุ้ง</div>
+      <div class="food-price">ราคา 70 บาท</div>
+    </div>
+  </div>
+
+  <div class="food-item">
+    <img class="food-image" src="https://img.wongnai.com/p/l/2017/12/05/cf7abde5eaf941a883b1f545531f5de8.jpg" alt="สปาเกตตีเพสโต้ซอส">
+    <div class="food-info">
+      <div class="food-category">เส้น</div>
+      <div class="food-name">สปาเกตตีเพสโต้ซอส</div>
+      <div class="food-price">ราคา 70 บาท</div>
+    </div>
+  </div>
+
+  <div class="food-item">
+    <img class="food-image" src="https://img.wongnai.com/p/1920x0/2018/02/21/eb545f7027b7422db48b1f9d18657a15.jpg" alt="หมี่ยำกุ้งสด">
+    <div class="food-info">
+      <div class="food-category">เส้น</div>
+      <div class="food-name">หมี่ยำกุ้งสด</div>
+      <div class="food-price">ราคา 70 บาท</div>
+    </div>
+  </div>
+
+  <div class="food-item">
+    <img class="food-image" src="https://img.wongnai.com/p/1920x0/2018/02/05/a488c54c6499443b81163ff776528ce6.jpg" alt="ผัดหมี่ซั่วทะเล">
+    <div class="food-info">
+      <div class="food-category">เส้น</div>
+      <div class="food-name">ผัดหมี่ซั่วทะเล</div>
+      <div class="food-price">ราคา 80 บาท</div>
+    </div>
+  </div>
+
+  <div class="food-item">
+    <img class="food-image" src="https://img.wongnai.com/p/1920x0/2018/05/22/8c6e3103c3314af0854735a799f21603.jpg" alt="สปาเกตตีผัดต้มยำกุ้ง">
+    <div class="food-info">
+      <div class="food-category">เส้น</div>
+      <div class="food-name">สปาเกตตีผัดต้มยำกุ้ง</div>
+      <div class="food-price">ราคา 90 บาท</div>
+    </div>
+  </div>
+
+  <div class="food-item">
+    <img class="food-image" src="https://img.wongnai.com/p/l/2017/09/12/d124b25851e8444f9be036b6ebf4535b.jpg" alt="ยำขนมจีน">
+    <div class="food-info">
+      <div class="food-category">เส้น</div>
+      <div class="food-name">ยำขนมจีน</div>
+      <div class="food-price">ราคา 60 บาท</div>
+    </div>
+  </div>
+
+  <div class="food-item">
+    <img class="food-image" src="https://img.wongnai.com/p/1920x0/2018/08/21/97001d21100c4ec5a25a3f527d8dbe4b.jpg" alt="ผัดไทยกุ้งสดห่อไข่">
+    <div class="food-info">
+      <div class="food-category">เส้น</div>
+      <div class="food-name">ผัดไทยกุ้งสดห่อไข่</div>
+      <div class="food-price">ราคา 70 บาท</div>
+    </div>
+  </div>
+</div>
+
+</body>
+<!-- Footer Section -->
+<footer style="background-color: #0b5804; color: white; padding: 40px 20px; font-family: sans-serif;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto;">
+
+    <!-- เกี่ยวกับเรา -->
+    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+      <div>
+      <img src="img/dog chef.jpg" alt="เชฟDAWG" style="width: 50px; margin-top: 35px;" ><a>เชฟDAWG</a>
+      </div>
+      <ul style="list-style: none; padding: 0;">
+        <li>รู้จักเชฟ DAWG</li>
+        <li>ร่วมงานกับเรา</li>
+        <li>ร่วมธุรกิจกับ เชฟDAWG</li>
+        <li>ข่าวและกิจกรรม</li>
+        <li>นโยบายการใช้คุกกี้ (Cookies Policy)</li>
+        <li>ข้อกำหนดและเงื่อนไขในการใช้บริการเว็บไซต์</li>
+        <li>การเก็บรวบรวมข้อมูลส่วนบุคคลของสมาชิก (Privacy Notice)</li>
+        <li>ข้อกำหนดและเงื่อนไขสมาชิก DAWG member</li>
+      </ul>
+    </div>
+
+    <!-- ช่วยเหลือ -->
+    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+      <h3>ช่วยเหลือ</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li>คำถามที่พบบ่อย</li>
+        <li>คอลเซ็นเตอร์ 00-826-0000</li>
+        <li>บริการสมาชิก 00-826-0000</li>
+        <li>ติดต่อเรา</li>
+      </ul>
+    </div>
+
+    <!-- ติดตามเรา -->
+    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+      <h3>ติดตามเรา</h3>
+      <div style="margin-bottom: 10px;">
+        <span style="margin-right: 10px;">📘</span>
+        <span style="margin-right: 10px;">🐦</span>
+        <span style="margin-right: 10px;">📺</span>
+        <span style="margin-right: 10px;">📸</span>
+        <span>💬</span>
+      </div>
+      <p>รับโปรโมชั่นและดีลพิเศษก่อนใคร</p>
+      <form>
+        <input type="email" placeholder="ใส่อีเมลของคุณ" style="padding: 8px; border: none; border-radius: 5px;">
+        <button style="padding: 8px 12px; border: none; background: white; color: #006241; border-radius: 5px;">เข้าร่วม</button>
+      </form>
+    </div>
+
+    <!-- ดาวน์โหลดแอป -->
+    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+      <h3>ดาวน์โหลดแอป เชฟDAWG</h3>
+        <img src="https://www.drupal.org/files/styles/grid-3-2x/public/project-images/qrcode-module_0.png?itok=ZVIdRXkv"
+        alt="QR Code" style="width: 50px; margin-top: 5px;"><c>  Qr test</c><br>
+        <img src="https://www.drupal.org/files/styles/grid-3-2x/public/project-images/qrcode-module_0.png?itok=ZVIdRXkv" 
+        alt="App Store" style="width: 50px; margin-bottom: 5px;"><c>  Qr test</c><br>
+        <img src="https://www.drupal.org/files/styles/grid-3-2x/public/project-images/qrcode-module_0.png?itok=ZVIdRXkv" 
+        alt="Google Play" style="width: 50px; margin-bottom: 5px;"><c>  Qr test</c><br>
+        <img src="https://www.drupal.org/files/styles/grid-3-2x/public/project-images/qrcode-module_0.png?itok=ZVIdRXkv" 
+        alt="App Gallery" style="width: 50px;"><c>  Qr test</c>
+    </div>
+  </div>
+</footer>
+</html>
