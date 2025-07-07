@@ -43,7 +43,8 @@
     </div>
       <div id="login-container" style="text-align: right; margin-top: 10px;">
         <button onclick="document.getElementById('id01').style.display='block'" class="login-btn">เข้าสู่ระบบ</button>
-
+        <button onclick="document.getElementById('id02').style.display='block'" class="login-btn">สมัครสมาชิก</button>
+        
         <div id="id01" class="modal">
           <form class="modal-content animate" action="/action_page.php" method="post">
             <div class="imgcontainer">
@@ -70,8 +71,33 @@
             </div>
           </form>
         </div>
+        <!-- SIGNUP MODAL ย้ายออกมาอยู่แยก -->
+<div id="id02" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img/dog chef.jpg" alt="Avatar" class="avatar">
+    </div>
+    <div class="container">
+      <label for="uname"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="uname" required>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      <label for="psw-repeat"><b>Re-enter Password</b></label>
+      <input type="password" placeholder="Re-enter Password" name="psw-repeat" required>
+      <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+      <p>By creating an account you agree to our<a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+    </div>
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="submit" class="loginbtn">Sign Up</button>
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
       </div>
     </div>
+    
   </nav>
 </header>
 
@@ -102,6 +128,15 @@ function carousel() {
 
 <script>
 var modal = document.getElementById('id01');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+<script>
+var modal = document.getElementById('id02');
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
