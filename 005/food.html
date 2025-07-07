@@ -8,12 +8,13 @@
 <!-- โหลดฟอนต์ Kanit -->
 <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet" />
 </head>
+<body>
+
 <header>
-  <h1><img src="img/dog chef.jpg" height="100" width="100" ></h1>
-<h2>ร้านข้าวฝีมือกังๆเชฟDAWG</h2>
-<nav>
-<div class="menu-bar">
-  <div class="menu-logo">
+  <h1><img src="img/dog chef.jpg" alt="เชฟDAWG"><a>ร้านข้าวฝีมือกังๆเชฟDAWG</a></h1> 
+  <nav>
+    <div class="menu-bar">
+      <div class="menu-logo">
   <a href="#" class="menu-item">
       <a href="food.html"><img src="https://img.icons8.com/fluent-systems-regular/512w/FFFFFF/meal.png" alt="อาหารคาว">
        <a href="food.html">อาหารคาว</a>
@@ -26,7 +27,7 @@
   </a>
       <a href="#" class="menu-item">
       <a href="appetizers.html"><img src="https://img.icons8.com/ios7/512w/FFFFFF/potato-chips.png" alt="อาหารทานเล่น">
-       <a href="appetizers.html">อาหารทานเล่น1</a>
+       <a href="appetizers.html">อาหารทานเล่น</a>
       </a>
   </a>
       <a href="#" class="menu-item">
@@ -40,23 +41,52 @@
       </a>
   </a>
     </div>
-</div>
-    </nav>
-</header>
-<h2 class="w3-center">Automatic Slideshow</h2>
+      <div id="login-container" style="text-align: right; margin-top: 10px;">
+        <button onclick="document.getElementById('id01').style.display='block'" class="login-btn">เข้าสู่ระบบ</button>
 
-<div class="w3-content w3-section" style="max-width:500px; margin:auto; text-align:center;">
-  <img class="mySlides" src="https://img.wongnai.com/p/800x0/2021/12/13/464583a8ce4c4499a6daa661eb9b998f.jpg" style="width:100%">
-  <img class="mySlides" src="https://img.wongnai.com/p/800x0/2021/12/13/fd241897c3654a28a1cd8bfec90520d0.jpg" style="width:100%">
-  <img class="mySlides" src="https://img.wongnai.com/p/800x0/2021/12/13/3c8c143b82cf449e8f90a3b4c215ed0b.jpg" style="width:100%">
-  <img class="mySlides" src="https://img.wongnai.com/p/800x0/2021/12/13/95d08edd66d34d10aa0366f099872c1f.jpg" style="width:100%">
-  <img class="mySlides" src="https://img.wongnai.com/p/800x0/2021/12/13/da07b958151b40cc9305511df1332bcc.jpg" style="width:100%">
+        <div id="id01" class="modal">
+          <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <img src="img/dog chef.jpg" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+
+              <button type="submit" class="loginbtn">Login</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ปรับ max-width:100% และเพิ่ม margin:auto เพื่อให้รูปอยู่กลาง -->
+<div class="w3-content w3-section" style="width: 100%; text-align: center; margin: auto;">
+  <img class="mySlides" src="img/pro1.png" style="width: 100%;">
+  <img class="mySlides" src="img/pro2.png" style="width: 100%;">
+  <img class="mySlides" src="img/pro3.png" style="width: 100%;">
+  <img class="mySlides" src="img/pro4.png" style="width: 100%;">
+  <img class="mySlides" src="img/pro5.png" style="width: 100%;">
 </div>
 
 <script>
 var myIndex = 0;
 carousel();
-
 function carousel() {
   var i;
   var x = document.getElementsByClassName("mySlides");
@@ -67,6 +97,15 @@ function carousel() {
   if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "block";  
   setTimeout(carousel, 2000); // Change the food image every 2 seconds
+}
+</script>
+
+<script>
+var modal = document.getElementById('id01');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
 </script>
 
@@ -108,7 +147,6 @@ function carousel() {
       <div class="food-price">ราคา 50 บาท</div>
     </div>
   </div>
-
 
  <div class="food-item">
     <img class="food-image" src="https://www.thaiholidayguide.com/wp-content/uploads/2022/12/a67e7aeb0c0b462391961bddf7365225-1024x768.webp" alt="แกงมัสมั่น">
@@ -183,15 +221,13 @@ function carousel() {
   </div>
 </div>
 
-</body>
 <!-- Footer Section -->
 <footer style="background-color: #0b5804; color: white; padding: 40px 20px; font-family: sans-serif;">
   <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto;">
-
     <!-- เกี่ยวกับเรา -->
     <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
       <div>
-      <img src="img/dog chef.jpg" alt="เชฟDAWG" style="width: 50px; margin-top: 35px;" ><a>เชฟDAWG</a>
+        <img src="img/dog chef.jpg" alt="เชฟDAWG" style="width: 50px; margin-top: 35px;" ><a>เชฟDAWG</a>
       </div>
       <ul style="list-style: none; padding: 0;">
         <li>รู้จักเชฟ DAWG</li>
@@ -247,4 +283,6 @@ function carousel() {
     </div>
   </div>
 </footer>
+
+</body>
 </html>

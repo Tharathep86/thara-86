@@ -9,11 +9,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet" />
 </head>
 <header>
-  <h1><img src="img/dog chef.jpg" height="100" width="100" ></h1>
-<h2>ร้านข้าวฝีมือกังๆเชฟDAWG</h2>
-<nav>
- <div class="menu-bar">
-  <div class="menu-logo">
+  <h1><img src="img/dog chef.jpg" alt="เชฟDAWG"><a>ร้านข้าวฝีมือกังๆเชฟDAWG</a></h1> 
+  <nav>
+    <div class="menu-bar">
+      <div class="menu-logo">
   <a href="#" class="menu-item">
       <a href="food.html"><img src="https://img.icons8.com/fluent-systems-regular/512w/FFFFFF/meal.png" alt="อาหารคาว">
        <a href="food.html">อาหารคาว</a>
@@ -40,36 +39,47 @@
       </a>
   </a>
     </div>
-</div>
-    </nav>
+      <div id="login-container" style="text-align: right; margin-top: 10px;">
+        <button onclick="document.getElementById('id01').style.display='block'" class="login-btn">เข้าสู่ระบบ</button>
+
+        <div id="id01" class="modal">
+          <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <img src="img/dog chef.jpg" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+
+              <button type="submit" class="loginbtn">Login</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
 </header>
-<h2 class="w3-center">Automatic Slideshow</h2>
-
-<div class="w3-content w3-section" style="max-width:500px; margin:auto; text-align:center;">
-  <img class="mySlides" src="https://img.wongnai.com/p/800x0/2021/12/13/464583a8ce4c4499a6daa661eb9b998f.jpg" style="width:100%">
-  <img class="mySlides" src="https://img.wongnai.com/p/800x0/2021/12/13/fd241897c3654a28a1cd8bfec90520d0.jpg" style="width:100%">
-  <img class="mySlides" src="https://img.wongnai.com/p/800x0/2021/12/13/3c8c143b82cf449e8f90a3b4c215ed0b.jpg" style="width:100%">
-  <img class="mySlides" src="https://img.wongnai.com/p/800x0/2021/12/13/95d08edd66d34d10aa0366f099872c1f.jpg" style="width:100%">
-  <img class="mySlides" src="https://img.wongnai.com/p/800x0/2021/12/13/da07b958151b40cc9305511df1332bcc.jpg" style="width:100%">
-</div>
-
 <script>
-var myIndex = 0;
-carousel();
-
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
+var modal = document.getElementById('id01');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
   }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 </script>
-
 <body>
   <h1>🥪รายการอาหารทานเล่น🥪</h1>
  <div class="food-list">
