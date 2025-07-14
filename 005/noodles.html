@@ -42,7 +42,7 @@
       <div id="login-container" style="text-align: right; margin-top: 10px;">
         <button onclick="document.getElementById('id01').style.display='block'" class="login-btn">เข้าสู่ระบบ</button>
         <button onclick="document.getElementById('id02').style.display='block'" class="login-btn">สมัครสมาชิก</button>
-        
+        <input type="text" id="searchInput" placeholder="ค้นหาเมนู..." onkeyup="searchMenu()" style="padding: 8px; border-radius: 5px; border: 1px solid #ccc;" />
         <div id="id01" class="modal">
           <form class="modal-content animate" action="/action_page.php" method="post">
             <div class="imgcontainer">
@@ -115,6 +115,23 @@ window.onclick = function(event) {
   }
 }
 </script>
+
+<script>
+function searchMenu() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const items = document.querySelectorAll(".food-item");
+
+  items.forEach(item => {
+    const name = item.querySelector(".food-name").textContent.toLowerCase();
+    if (name.includes(input)) {
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+  });
+}
+</script>
+
 <body>
   <h1>🍜รายการอาหารเส้น🍜</h1>
  <div class="food-list">
